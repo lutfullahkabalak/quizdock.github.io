@@ -13,7 +13,7 @@ QuizDock is in `0.x`. Security fixes go into the **latest release only**. Run a 
 
 ## Report a vulnerability
 
-Do not open a public issue. Open a [private security advisory](https://github.com/quizdock/quiz-dock/security/advisories/new) on the QuizDock repository, with the affected version, the steps to reproduce and the impact. There is no bounty; fixes are prioritised and disclosed once a patched release is out.
+Do not open a public issue. Open a [private security advisory](https://github.com/quizdock/quizdock/security/advisories/new) on the QuizDock repository, with the affected version, the steps to reproduce and the impact. There is no bounty; fixes are prioritised and disclosed once a patched release is out.
 
 ## The images
 

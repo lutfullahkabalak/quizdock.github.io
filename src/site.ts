@@ -1,8 +1,8 @@
 /** Addresses and navigation shared by every page. */
 export const DEMO_URL = 'https://quizdock-standalone.onrender.com';
 export const DOCKER_HUB_URL = 'https://hub.docker.com/r/fchaussin/quizdock';
-export const SOURCE_URL = 'https://github.com/quizdock/quiz-dock';
-export const CHANGELOG_URL = 'https://github.com/quizdock/quiz-dock/blob/main/CHANGELOG.md';
+export const SOURCE_URL = 'https://github.com/quizdock/quizdock';
+export const CHANGELOG_URL = 'https://github.com/quizdock/quizdock/blob/main/CHANGELOG.md';
 export const TRANSLATE_URL = 'https://hosted.weblate.org/engage/quizdock/';
 
 export const WHY = [

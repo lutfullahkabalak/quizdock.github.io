@@ -19,7 +19,7 @@ You normally use only the script: it runs `qd` in the right container for you.
 Get it once, on the server, in the instance's folder:
 
 ```sh
-curl -fsSLO https://raw.githubusercontent.com/quizdock/quiz-dock/main/quizdock
+curl -fsSLO https://raw.githubusercontent.com/quizdock/quizdock/main/quizdock
 chmod +x quizdock
 ```
 

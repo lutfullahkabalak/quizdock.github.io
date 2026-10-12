@@ -10,7 +10,7 @@ import { basename, dirname, join } from 'node:path';
 
 const OUT = 'src/generated';
 const FILES = ['schema/settings.json', 'schema/quiz-format-guide.md'];
-const REPO = 'quizdock/quiz-dock';
+const REPO = 'quizdock/quizdock';
 const SHOTS = 'docs/screenshots';
 const SHOTS_REF = 'main';
 const isShot = (path) => /\.(png|gif)$/.test(path);

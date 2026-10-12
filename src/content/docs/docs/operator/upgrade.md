@@ -95,7 +95,7 @@ One migration, applied on start: `user.locale` becomes the host's interface lang
 The `quizdock` script of earlier releases does not fetch a release's Compose files. Download it again before upgrading, in the instance's folder:
 
 ```sh
-curl -fsSLO https://raw.githubusercontent.com/quizdock/quiz-dock/main/quizdock
+curl -fsSLO https://raw.githubusercontent.com/quizdock/quizdock/main/quizdock
 ./quizdock upgrade
 ```
 

@@ -62,7 +62,7 @@ This is standard Docker, not a QuizDock tool: `docker save` writes images to a f
 | `docker-compose.full.yml` and `keycloak/realm-export.json` | Full |
 | `env/local.env.example`, `env/oidc.env.example`, `env/full.env.example` or `env/standalone.env.example` | A commented `.env` to start from, if you do not use `init` |
 
-All of them are at `https://raw.githubusercontent.com/quizdock/quiz-dock/main/<file>`. Take them from the release tag you install rather than `main` when the two differ.
+All of them are at `https://raw.githubusercontent.com/quizdock/quizdock/main/<file>`. Take them from the release tag you install rather than `main` when the two differ.
 
 Then, on the server, in the instance's folder:
 

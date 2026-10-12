@@ -27,11 +27,11 @@ Memory and CPU: see [Sizing](/docs/operator/sizing/).
 2. Download the script and make it executable:
 
    ```sh
-   curl -fsSLO https://raw.githubusercontent.com/quizdock/quiz-dock/main/quizdock
+   curl -fsSLO https://raw.githubusercontent.com/quizdock/quizdock/main/quizdock
    chmod +x quizdock
    ```
 
-   The script is also [available as a raw file](https://raw.githubusercontent.com/quizdock/quiz-dock/main/quizdock) to read before running it.
+   The script is also [available as a raw file](https://raw.githubusercontent.com/quizdock/quizdock/main/quizdock) to read before running it.
 
 3. Run **one** of these, for the setup you chose:
 
@@ -69,7 +69,7 @@ docker run -d --name quizdock --restart unless-stopped \
 ```
 
 - `-v quizdock:/data` keeps the database, the media and the templates in a named volume. Without it, everything is lost with the container.
-- To set variables, add `--env-file .env`. A commented starting point is `env/standalone.env.example` in the QuizDock repository, also downloadable as `https://raw.githubusercontent.com/quizdock/quiz-dock/main/env/standalone.env.example`.
+- To set variables, add `--env-file .env`. A commented starting point is `env/standalone.env.example` in the QuizDock repository, also downloadable as `https://raw.githubusercontent.com/quizdock/quizdock/main/env/standalone.env.example`.
 - The first start creates the database and runs the migrations: allow a minute before `/health` answers.
 
 The `./quizdock` script manages a container started this way if it is named `quizdock` and the folder has a `.env` with `QUIZDOCK_MODE=standalone`.
@@ -79,8 +79,8 @@ The `./quizdock` script manages a container started this way if it is named `qui
 1. On the server, in the instance's folder, download the Compose file and a commented `.env` to start from:
 
    ```sh
-   curl -fsSLO https://raw.githubusercontent.com/quizdock/quiz-dock/main/docker-compose.prod.yml
-   curl -fsSL -o .env https://raw.githubusercontent.com/quizdock/quiz-dock/main/env/local.env.example
+   curl -fsSLO https://raw.githubusercontent.com/quizdock/quizdock/main/docker-compose.prod.yml
+   curl -fsSL -o .env https://raw.githubusercontent.com/quizdock/quizdock/main/env/local.env.example
    chmod 600 .env
    ```
 
