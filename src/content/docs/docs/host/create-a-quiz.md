@@ -9,7 +9,17 @@ A quiz is a list of questions and slides, played in order. This page covers the 
 
 ## Create the quiz
 
-In **My quizzes**, choose **New quiz**. The draft is not a blank page: it opens with an intro slide that shows `{title}` and `{description}` on a random gradient, followed by a first multiple-choice question. The intro follows the quiz as you rename it.
+In **Quizzes → My quizzes**, **New quiz** offers:
+
+| Choice | What it does |
+|---|---|
+| **Blank quiz** | A new draft, below. |
+| **From a template…** | Opens **Templates**, to copy a shared quiz. See [Templates and community](/docs/host/templates-and-community/). |
+| **Import a file…** | A QuizDock bundle, a `quiz.json` or a Kahoot spreadsheet. See [Import a quiz](/docs/host/import-a-quiz/). |
+
+**My quizzes** shows your quizzes as a grid or a list (**Display**). Each one shows its first step, as it will look: its first slide, else its cover, else its first question. Its main action (**Present**, or **Publish to present** on a draft) sits at the right.
+
+A blank draft is not a blank page: it opens with an intro slide that shows `{title}` and `{description}` on a random gradient, followed by a first multiple-choice question. The intro follows the quiz as you rename it.
 
 The editor header holds the title (edit it in place), the status, **Preview** and **More**. **More** opens **History**, **Export**, **Export for publication**, **Share as a template** (once the quiz is ready), **Archive** and **Delete quiz**.
 
@@ -25,6 +35,7 @@ The editor header holds the title (edit it in place), the status, **Preview** an
   - **Licence**: **CC0 — no conditions**, **CC BY 4.0 — credit the author** or **CC BY-SA 4.0 — credit, share alike**. Required to share the quiz as a template.
   - **Tags**: up to 5 keywords. Press Enter to add one.
   - **Share with the instance’s other hosts**: they see the quiz in their list, read-only, and can **Create a quiz from this** to get their own copy.
+- **Theme**: the quiz's look on the big screen and the phones. See [Quiz themes](/docs/host/quiz-themes/).
 - **Allow player feedback**: a rating panel (1 to 5 stars and an optional comment) is offered at the end of the quiz, every time it is played. It is on for a new quiz. Once reviews come in, **See all {n} reviews** opens them.
 
 ## The list of questions and slides
@@ -41,7 +52,7 @@ Every question has:
 - **Answer explanation (shown with the right answer)**: optional, up to 2000 characters.
 - **Timing**: **Time (s)**, 5 to 240 seconds, 20 by default. **Answer shown for (s)**, 1 to 300 seconds, applies in auto mode only: how long the right answer stays on screen before moving on. Empty means the instance's setting, shown in the field, for example "auto (5 s)".
 - **Points**: **Standard**, **Double** or **Fixed (no speed bonus)**. **Scoring** appears for the types that offer a variant. See [Scoring](/docs/host/scoring/).
-- **Background**: **White**, **Image** or **Gradient**.
+- **Background**: **The theme’s**, an **Image**, a **Gradient** or a **Colour**, as on a [slide](/docs/host/slides/#background-and-contrast).
 - **Picture on the big screen**: **Below the text**, **Above the text**, **Left of the text** or **Right of the text**.
 - **Question media**: a picture or a video, and a sound. See [Media](/docs/host/media/).
 

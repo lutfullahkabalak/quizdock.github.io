@@ -2,7 +2,7 @@
 title: Templates and community quizzes
 description: Start a QuizDock quiz from a shared template, share your own quiz with the other hosts of your instance, and use or publish community quizzes.
 sidebar:
-  order: 7
+  order: 8
 ---
 
 You do not have to start from a blank quiz. Your instance has a catalogue of templates shared by its hosts, and it can also offer community quizzes published by other authors. This page covers taking a quiz from either, and sharing your own.

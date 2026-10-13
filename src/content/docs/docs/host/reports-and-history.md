@@ -2,7 +2,7 @@
 title: Reports and history
 description: Find the results of past QuizDock sessions per quiz, read the results by question and by player, and what tracking and full capture keep.
 sidebar:
-  order: 13
+  order: 14
 ---
 
 Every archived session of a quiz stays in its history: the leaderboard, the success rate, the results by question and, when you chose so, every answer of every player. This page says where to find them and what each report holds.

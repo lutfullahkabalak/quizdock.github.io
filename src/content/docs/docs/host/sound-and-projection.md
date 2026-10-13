@@ -1,8 +1,8 @@
 ---
 title: Sound and projection
-description: Put the QuizDock projection on the big screen, turn its sound on, set the room's effects and music, and control media from the console.
+description: Put the QuizDock projection on the big screen, from your computer or another one, turn its sound on, set the room's effects and music, and control media from the console.
 sidebar:
-  order: 11
+  order: 12
 ---
 
 In a room you work with two screens: the console, for you, and the projection, for the audience. The projection plays the sound; the console stays silent. This page covers setting both up, the room's sound, and controlling media during the game.
@@ -22,6 +22,19 @@ The browser allows sound only after a click in the window that plays it, not in 
 
 The console never plays the quiz's sound, so you can keep it on a laptop facing you. Use Chrome or Edge for the console and the projection: they are what QuizDock is built and tested on.
 
+## Project from another computer
+
+When the projector hangs on another computer than yours, make a screen on that computer the room's projection:
+
+1. In the console, choose **⋮** next to **Projection window**: **Project from another computer**.
+2. On the computer connected to the projector, open the address it shows, or scan its QR code.
+3. That screen shows a **Projection code** of 4 digits, in its bottom-left corner.
+4. Type it in **Code shown on that screen** and choose **Make it the projection**. The console says "That screen is now the room's projection."
+
+The screen stays the projection when it reloads or reconnects. Then choose **Fullscreen** and **Turn sound on** in it, as above.
+
+Only the projection (the window **Projection window** opens, or a screen you paired) drives the media: it plays the sound, the console waits for it before a question with media, and the other devices follow its place in a sound or a video. Any other screen opened with the PIN is a copy, like a participant's: it follows the game and drives nothing.
+
 ## Room sound
 
 **Room sound** sets the effects and the music the projection plays around the questions. Everything is off in a new room. Open it from the console's second row, in the lobby or at any moment of the game.
@@ -34,7 +47,7 @@ The console never plays the quiz's sound, so you can keep it on a laptop facing 
 | **Countdown** | Over the last five seconds of the time, the end sound on zero. Stops if everyone has answered. |
 | **Music** | A background track while players answer. It steps out while a question plays its own sound or video, and between questions, then comes back where it was. |
 
-Each effect is either **Built-in (synthesised)** or **A sound from the library…**: upload one, or take one of your sounds or of the instance's. The music is **None** or a sound from the library. **Hear "{name}" (here only)** plays a sound on your own device to check it.
+Each effect is either **Built-in (synthesised)** or **A sound from the library…**: upload one, or take one of your sounds or of the instance's. The music is **None** or a sound from the library. **Hear "{name}" (here only)** plays a sound on your own device to check it. When the quiz's [theme](/docs/host/quiz-themes/) has a sound of its own for an effect, it plays instead of the built-in one; a sound you pick here still wins.
 
 Three levels balance the room: **Media** (the quiz's own sounds and videos), **Music** and **Effects**. **Projection sound** switches the projection's sound off and on; while it is off the console shows **Room muted**, and the levels are kept for when it is back.
 

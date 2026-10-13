@@ -27,7 +27,7 @@ GitHub sees the server's IP address; nothing else is sent. To turn it off, set `
 On the server, in the instance's folder:
 
 ```sh
-./quizdock upgrade 0.14.0
+./quizdock upgrade 0.15.0
 ```
 
 It:
@@ -43,7 +43,7 @@ It:
 
 Without a tag, `upgrade` pulls the tag already in `.env` again: with `latest`, that is the latest release.
 
-**Standalone:** the script pulls the standalone image of that release (`standalone-0.14.0`, or `standalone` when the tag is `latest`), then recreates the container; the data stays in the `quizdock` volume.
+**Standalone:** the script pulls the standalone image of that release (`standalone-0.15.0`, or `standalone` when the tag is `latest`), then recreates the container; the data stays in the `quizdock` volume.
 
 Check the result with `./quizdock status`, and the migrations with `./quizdock migrate:status`.
 
@@ -69,7 +69,7 @@ On the server, in the instance's folder:
 
 ```sh
 ./quizdock backup
-# set QUIZDOCK_TAG=0.14.0 in .env, then:
+# set QUIZDOCK_TAG=0.15.0 in .env, then:
 docker compose -f docker-compose.prod.yml pull
 docker compose -f docker-compose.prod.yml up -d
 docker compose -f docker-compose.prod.yml logs migrate
@@ -78,6 +78,28 @@ docker compose -f docker-compose.prod.yml logs migrate
 
 On a server without Internet access: see [Air-gapped installation](/docs/operator/air-gapped/#upgrade-offline).
 
+## Give QuizDock its own database role
+
+An instance installed before 0.13.2 connects to PostgreSQL as its superuser, and so does its Keycloak in the full setup. `./quizdock db:roles` gives each of them a role of its own, which owns its database and reaches nothing else. The superuser stays, for administering PostgreSQL (backups). Compose and full only: the standalone image's database is reached from inside its container only.
+
+First download the `quizdock` script again: older copies do not have the command. On the server, in the instance's folder:
+
+```sh
+curl -fsSLO https://raw.githubusercontent.com/quizdock/quizdock/main/quizdock
+./quizdock db:roles
+```
+
+It:
+
+1. says which roles it gives (`quizdock`, and `keycloak` in the full setup), and asks to continue;
+2. takes a backup into `./backups/`;
+3. stops the application (and Keycloak) for a moment;
+4. moves each database to its new role;
+5. writes the roles and their passwords to `.env` (`QUIZDOCK_DB_USER`, `KEYCLOAK_DB_USER`), last;
+6. starts the instance, waits for `/health` and runs `doctor`.
+
+A failure before `.env` is written leaves the instance as it was, on the superuser, and starts it again. If the instance does not come back healthy afterwards, the message says how to go back: remove the lines just added to `.env`, then `./quizdock up`. An instance that already has its roles is left alone. `doctor` warns while the full setup's Keycloak still uses the superuser.
+
 ## Version notes
 
 What changes for an operator, by release. Read every note between your version and the new one.
@@ -85,6 +107,14 @@ What changes for an operator, by release. Read every note between your version a
 ### From v1: a broken C1 variable refuses to start
 
 Since 0.13, the application logs every variable it cannot read (it uses the default instead) or that is out of range (it uses it as is), and `doctor` lists them. A critical one (level C1, for example `AUTH_MODE=OIDC` instead of `oidc`) is only a warning for now. **From v1, the instance will refuse to start** with it. Fix what the log names before then. See [Configuration](/docs/operator/configuration/#warnings-at-start).
+
+### 0.15: quiz themes and the instance's look
+
+Migrations, applied on start, add the quiz themes and the instance's look (see [Quiz themes](/docs/host/quiz-themes/) and [Branding](/docs/admin/branding/#interface)). Every quiz takes the instance's default theme, Classic: QuizDock's usual colours, with animal icons on the answers. No setting, `.env` or Compose file changes.
+
+A `branding/override.css` that sets `--primary`, `--ring`, `--radius` or `--font-sans` in `:root`, or the answers' colours (`--answer-*`), no longer changes them: set the colours, the corners and the font in **Administration → Interface**, the answers' colours in a [quiz theme](/docs/host/quiz-themes/). The rest of the stylesheet and its `qd-*` hooks still apply.
+
+An instance installed before 0.13.2 can give QuizDock its own database role: see [above](#give-quizdock-its-own-database-role).
 
 ### 0.14: the host's interface language
 

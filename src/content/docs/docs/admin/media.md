@@ -19,13 +19,15 @@ Hosts add images, videos and sounds to their questions and slides. The editor co
 | Video | MP4 (H.264 and AAC), short edge at most 1080 px, at most 30 frames per second |
 | Sound | M4A (AAC), 128 kb/s |
 
+[Quiz themes](/docs/host/quiz-themes/) add two kinds of their own: **Theme icons** (square, single-colour SVG, rebuilt from a safe subset at upload) and **Theme fonts** (`.woff2`). A file a theme holds is never cleaned up, and cannot be deleted while the theme holds it.
+
 The server checks every file by its content, never by its name. It also accepts the formats stored before the converter existed (MP3, PNG, JPEG, GIF, AVIF), which keep playing; quizzes imported from elsewhere may carry them. The page marks them "older format".
 
 A file is stored once per content: the same image uploaded twice, or brought back by importing a quiz, takes the room of one.
 
 ## Disk
 
-The **Disk** card gives the number of files and their size, by kind (images, videos, sounds) and by owner, and the files in older formats.
+The **Disk** card gives the number of files and their size, by kind (images, videos, sounds, theme icons and fonts) and by owner, and the files in older formats.
 
 ## Clean-up
 
@@ -55,7 +57,7 @@ The **Files** list shows every file with its owners, size, dimensions and where 
 
 The filter bar stays at the top of the page while the files scroll:
 
-- **Kind**: images, videos or sounds.
+- **Kind**: images, videos, sounds, theme icons or theme fonts.
 - **Show**: **All**, **Unused** (the files no quiz and no past result uses) or **Older formats**.
 - **Owner**, in the **All** view: one account, or **All but Global** for the hosts' files, leaving out those only the global media hold.
 - **Sort**: **Largest first**, **Most used first** or **Newest first**.

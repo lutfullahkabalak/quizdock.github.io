@@ -2,7 +2,7 @@
 title: Import a quiz
 description: Import a QuizDock bundle, a quiz.json file or a Kahoot spreadsheet, move quizzes between instances, and convert a quiz from another tool with a chatbot.
 sidebar:
-  order: 6
+  order: 7
 ---
 import Guide from '../../../../generated/quiz-format-guide.md';
 
@@ -10,13 +10,13 @@ QuizDock imports three kinds of file from the dashboard: its own bundle (`.zip`)
 
 ## Import from the dashboard
 
-1. In **My quizzes**, choose **Import**.
+1. In **My quizzes**, choose **New quiz → Import a file…**.
 2. Pick a `.zip`, `.json` or `.xlsx` file.
 3. The quiz opens in the editor as a new **Draft**. Check it, then **Publish (ready)**.
 
 | File | What it holds |
 |---|---|
-| `.zip`, a QuizDock bundle | The whole quiz, with its media, as **Export** writes it. |
+| `.zip`, a QuizDock bundle | The whole quiz, with its media and its [theme](/docs/host/quiz-themes/), as **Export** writes it. |
 | `.json`, a `quiz.json` | The quiz's text only: questions, answers, slides, no media. |
 | `.xlsx`, a Kahoot spreadsheet | Questions written in Kahoot's official template. |
 
@@ -45,8 +45,8 @@ A Kahoot quiz's web address is not an import source: the spreadsheet template is
 
 A bundle carries a whole quiz from one bank or one instance to another.
 
-1. In the editor, open **More** and choose **Export**. The browser downloads a file named after the quiz, such as `discover-france.quizdock.zip`: the quiz file and its media.
-2. On the other side, choose **Import** in **My quizzes** and pick that file.
+1. In the editor, open **More** and choose **Export**. The browser downloads a file named after the quiz, such as `discover-france.quizdock.zip`: the quiz file, its media and its theme.
+2. On the other side, choose **New quiz → Import a file…** in **My quizzes** and pick that file.
 
 The import is always a new draft with its own copy of the media; the original quiz is not linked to it. Past sessions and results do not travel with a bundle.
 
@@ -69,7 +69,7 @@ The chatbot's provider receives the content of the quiz. Use one you trust with 
 
 1. Open a chatbot and paste the prompt below. Attach the [format guide](https://raw.githubusercontent.com/quizdock/quizdock/main/schema/quiz-format-guide.md) (download it, or paste it below the prompt), then your quiz. Several screenshots in one message are fine.
 2. The chatbot answers with a JSON block and a short *To check* list. Save the block as a file ending in `.json`: copy it into a text editor, or download it when the chatbot offers a file.
-3. In QuizDock, choose **Import** in **My quizzes** and pick the file. The quiz opens as a new draft.
+3. In QuizDock, choose **New quiz → Import a file…** in **My quizzes** and pick the file. The quiz opens as a new draft.
 4. Read the *To check* list, then go through the quiz before playing it:
    - the correct answers: a chatbot can misread a mark, or guess one the source did not show;
    - the pictures: none are imported; add your own from the [media library](/docs/host/media/);

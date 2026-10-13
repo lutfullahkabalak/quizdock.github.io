@@ -22,7 +22,7 @@ A slide must show something: a heading, a text, an image, a background or a vide
 
 ## Background and contrast
 
-**Background** is **White**, an **Image** or a **Gradient** (two or more colours with **Add a colour**, and an **Angle**). On a picture or a gradient, choose the **Text contrast**: **Light text** or **Dark text**, and **Outline (halo, like subtitles)** to keep text readable on a busy picture.
+**Background** is **The theme’s** (the [quiz theme](/docs/host/quiz-themes/)'s background, the default), an **Image**, a **Gradient** (two or more colours with **Add a colour**, and an **Angle**) or a plain **Colour**. An image is laid as a **Watermark**, **Cover** (with a **Veil**), **Whole** or a **Pattern**, with its size, opacity, blur and greyscale. On your own background, choose the **Text contrast**: **Light text** or **Dark text**, and **Outline (halo, like subtitles)** to keep text readable on a busy picture.
 
 ## Slide media
 

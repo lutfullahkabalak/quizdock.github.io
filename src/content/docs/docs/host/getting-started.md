@@ -43,15 +43,13 @@ The role comes from your identity provider, or an administrator of the instance 
 
 Managing is not hosting: a manager without the **Host** role cannot create, edit or present quizzes. A role cannot be changed from **My account**; see [Accounts and roles](/docs/admin/accounts-and-roles/) for how administrators grant them.
 
-Under **Preferences**, **My account** also sets your **Interface language**: the language of your own screens. See [Start a room](/docs/host/start-a-room/#interface-language).
-
-The navigation shows **My quizzes**, **Templates**, **My account**, **Administration** (for managers only) and **Log out**.
+The top bar shows **Quizzes** (with its tabs **My quizzes**, **Templates** and **Themes**), **Sessions** and **Administration** (for managers only). Your name, at its right, opens the account menu: **Appearance**, **Language**, **My account** and **Log out**. See [Language and appearance](/docs/host/language-and-appearance/).
 
 ## Start from a sample quiz
 
 QuizDock ships three sample quizzes in English: **Discover France**, **Discover Taiwan** and **Discover Türkiye**. Each one uses every question type, with pictures and slides, and every media is credited. They live in **Templates**.
 
-1. Open **Templates** (or, on an empty bank, **Browse the templates**).
+1. Open **Quizzes → Templates** (or, on an empty bank, **Browse the templates**).
 2. Open one of the samples and choose **Create a quiz from this**.
 3. An independent copy lands in **My quizzes** as a draft. Choose **Publish (ready)**, then **Present**, or change it first.
 
@@ -59,7 +57,7 @@ An administrator can also add the sample quizzes directly to an account's bank f
 
 ## From your first quiz to your first game
 
-1. In **My quizzes**, choose **New quiz**. A draft opens with an intro slide and a first question.
+1. In **My quizzes**, choose **New quiz → Blank quiz**. A draft opens with an intro slide and a first question.
 2. Write your questions. See [Create a quiz](/docs/host/create-a-quiz/) and [Question types](/docs/host/question-types/).
 3. Choose **Publish (ready)**. A quiz must be ready to be played.
 4. Choose **Present**. A room opens with a 6-digit PIN.

@@ -2,7 +2,7 @@
 title: Media
 description: Add pictures, videos and sounds to QuizDock questions and slides, what the editor converts, the size limits, alt text, credits and the media library.
 sidebar:
-  order: 5
+  order: 6
 ---
 
 Questions and slides can carry pictures, videos and sounds. You upload the file in the editor; the browser converts it, and QuizDock plays it in sync on the big screen and on the devices that should hear it. This page covers the editor side. For the overview, see [Media](/media/).

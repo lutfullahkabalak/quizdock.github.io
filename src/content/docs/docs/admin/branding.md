@@ -1,23 +1,28 @@
 ---
 title: Branding
-description: "Give a QuizDock instance your organisation's name, logo and colours, without rebuilding the image: four settings and an optional folder of files."
+description: "Give a QuizDock instance your organisation's name, language, logo, colours and font from the administration, and go further with a folder of files."
 sidebar:
   order: 8
 ---
 
-A QuizDock instance can carry your organisation's name, logo and colours. Nothing is rebuilt: four settings, and an optional folder of files mounted into the container.
+A QuizDock instance can carry your organisation's name, logo and colours. Nothing is rebuilt. Two spaces of the administration hold it, and an optional folder of files goes further:
 
-Who does what:
-
-- **The four settings** (`APP_NAME`, `APP_LANG`, `APP_LOGO_URL`, `APP_FEEDBACK_URL`) are level C4. An administrator changes them in **Administration → Settings** (with `ADMIN_WEB_SCOPE=write`), or at the **Identity** step of the setup wizard. The operator can also set them in `.env`. They apply at once.
+- **Branding**: who the instance is, in four settings: its name, its language, its logo and where feedback goes.
+- **Interface**: how the application looks: its colours, font, corners, light or dark mode, and the backgrounds of its showcase pages.
 - **The branding folder** (logo file, icon, stylesheet) lives on the server. Whoever runs the instance puts it there and mounts it: an administrator cannot upload it from the web.
 
-## The four settings
+Both spaces sit beside a preview of five pages (**Home**, **Join**, **Sign in**, **Not found**, **My quizzes**), light or dark. Changing either needs `ADMIN_WEB_SCOPE=write`, and the administration token in local mode (see [Administration overview](/docs/admin/overview/)).
+
+A quiz on the big screen and the phones wears its own [theme](/docs/host/quiz-themes/), never the instance's look. The instance's default theme is set from the themes: see [below](#the-default-quiz-theme).
+
+## Branding
+
+The four settings are level C4. **Branding** changes them as **Settings** does (see [Settings](/docs/admin/settings/)); so does the **Identity** step of the setup wizard. The operator can also set them in `.env`. They apply at once.
 
 | Setting | What it does | Accepts | Default |
 |---|---|---|---|
 | `APP_NAME` | The name in the header, the browser tab, the share messages, and the app installed on a phone. | 1 to 40 characters | `QuizDock` |
-| `APP_LANG` | The language of the interface, for the whole instance (no browser detection). New quizzes start in this language; each quiz can be set to another. | `en`, `fr`, `es`, `zh`, `zh-TW`, `tr` | `en` |
+| `APP_LANG` | The interface's language by default, for whoever has not picked their own (no browser detection). New quizzes start in this language; each quiz can be set to another. See [Language and appearance](/docs/host/language-and-appearance/). | `en`, `fr`, `es`, `zh`, `zh-TW`, `tr`, `de`, `hi`, `it`, `ja`, `pl`, `ru` | `en` |
 | `APP_LOGO_URL` | A logo hosted somewhere else (a CDN, a path outside the branding folder). Empty: the logo is looked up in the branding folder. | an `https://` address | empty |
 | `APP_FEEDBACK_URL` | Where the home page's feedback links lead (below). | an `http(s)://` address, or `none` | empty |
 
@@ -32,12 +37,41 @@ The home page offers **Report a bug**, **Suggest a feature**, **Fix a translatio
 | any other address | A single **Send feedback** link. |
 | `none` | No links. |
 
+## Interface
+
+**Interface** changes the look of the application itself: the back office, the home, join and sign-in pages. Each change is saved as you make it; every visitor sees it from the next page they open. **Back to QuizDock’s look** undoes everything.
+
+| Part | What it sets |
+|---|---|
+| **Main colour** | Buttons, the selected filters, the focus ring. Their text is white. The same colour in light and dark mode. |
+| **Accent colour** | Links and the mark of the current page. By default the main colour. On the dark page, links are lightened until they read comfortably (7:1). |
+| **Font** | One of the shipped fonts, or a `.woff2` you import, with its licence. |
+| **Corners** | **Square**, **Standard** or **Rounded**: cards, buttons and fields. |
+| **Light or dark** | **Each device chooses** (the default: each person picks in their account menu, see [Language and appearance](/docs/host/language-and-appearance/#appearance)), **Always light** or **Always dark**. |
+| **Showcase backgrounds** | The background of the home, join, sign-in, error and not-found pages; working pages stay plain. **None**, **Logo watermark** (the logo's shape in the text's colour, faded, with its size and opacity; the default) or **Picture**, laid as a quiz step's background is. |
+
+The logo watermark draws QuizDock's mark while the instance shows QuizDock's logo, and your logo's outline once you set your own: a logo with a transparent background draws best.
+
+**Accessibility** measures the colours, never declares them:
+
+- the white text on the main buttons reaches 4.5:1;
+- the main colour stands out from the page, light and dark (3:1);
+- links in the accent read on the page, light and dark (4.5:1).
+
+Only a look that passes every check says **Accessible**. The live screens are not concerned: the quiz theme dresses them, and they are never dark.
+
+From the command line, `qd look.get`, `qd look.set` and `qd look.reset` do the same (see [Command line](/docs/operator/cli/)).
+
+## The default quiz theme
+
+Every quiz left on **Instance default** takes the instance's default theme, Classic until an administrator changes it. In **Quizzes → Themes**, choose **Make it the instance's default** in a theme's menu. It applies from each quiz's next game. A theme that is the default cannot be deleted. See [Quiz themes](/docs/host/quiz-themes/).
+
 ## The branding folder
 
 Two files are served at fixed addresses, and both are optional:
 
 - `/branding/logo.<ext>`: the header logo. The page tries `logo.svg`, `logo.avif`, `logo.webp`, `logo.png`, `logo.jpg`, `logo.jpeg` and `logo.gif`, in that order, and keeps the first one that loads. Put **one** logo file in the format you have. Without one, the header shows QuizDock's logo. `APP_LOGO_URL` skips this lookup.
-- `/branding/override.css`: a stylesheet loaded after the app's own, to change colours, the typeface or any rule (below). Without one, nothing is overridden.
+- `/branding/override.css`: a stylesheet loaded after the app's own, for any rule the administration does not offer (below). Without one, nothing is overridden.
 
 A third one gives the icon:
 
@@ -84,39 +118,20 @@ The icon of the browser tab and of a phone's home screen, apart from the header 
 
 The installed app takes `APP_NAME` as its name and `APP_LANG` as its language. A device keeps the icon it was installed with: a new icon shows on a new install.
 
-## Colours and type
+## Your own stylesheet
 
-`override.css` is loaded after the app's stylesheet, so a variable set in `:root` there wins.
+`override.css` is loaded after the app's stylesheet, for what **Interface** does not cover. A variable set in `:root` there wins over the app's defaults, except those the instance's look and the quiz themes set: the main colour (`--primary`, `--primary-foreground`, `--ring`), the corners (`--radius`) and the font (`--font-sans`) come from **Interface**, and on the live screens the answers' colours and `--primary` come from the quiz's theme. Change those there, not here.
 
 | Token | What it colours |
 |---|---|
-| `--primary`, `--primary-foreground` | Buttons, links, the focus ring, the leaderboard bars. |
 | `--background`, `--foreground`, `--muted`, `--muted-foreground`, `--border` | The surfaces and their text. |
 | `--success`, `--destructive`, `--warning` | Right, wrong, and the second half of a question's time (red for its last fifth); the rating stars. |
 | `--warning-text` | Words in that amber on a light background (the double points badge). |
-| `--answer-red`, `--answer-blue`, `--answer-yellow`, `--answer-green`, `--answer-purple`, `--answer-orange`, `--answer-pink`, `--answer-teal` | Each answer's colour, as the quiz's author picked it (tiles, legends, reveal bars). |
-| `--answer-none` | An answer with no colour. |
 | `--podium-1`, `--podium-2`, `--podium-3` | The podium's steps. |
-| `--font-sans` | The app's typeface. |
-| `--radius` | The roundness of cards, buttons and fields. |
 
 QuizDock writes its colours in [oklch](https://oklch.com); any CSS colour works.
 
-A question's or a slide's background carries `data-scheme`: `dark` under light text, `light` under dark text. Inside it, QuizDock sets the neutral tokens (`--background`, `--foreground`, `--card`, `--muted`, `--muted-foreground`, `--border`, `--input`…) to that local palette. Your brand colours (`--primary`, `--answer-*`, `--success`…) stay as you set them.
-
-### Your own typeface
-
-The instance's pages load fonts and stylesheets from the instance itself only: a font service on another address is blocked. Put the font file in the branding folder and declare it in `override.css`:
-
-```css
-@font-face {
-  font-family: 'Atkinson Hyperlegible';
-  src: url('/branding/atkinson-hyperlegible.woff2') format('woff2');
-}
-:root {
-  --font-sans: 'Atkinson Hyperlegible', system-ui, sans-serif;
-}
-```
+A question's or a slide's background carries `data-scheme`: `dark` under light text, `light` under dark text. Inside it, QuizDock sets the neutral tokens (`--background`, `--foreground`, `--card`, `--muted`, `--muted-foreground`, `--border`, `--input`…) to that local palette.
 
 ## Hooks on the live screens
 
@@ -155,12 +170,6 @@ The home page, the participant's phone, the projected screen and the host's cons
 
 ```css
 :root {
-  --primary: oklch(0.55 0.2 150);
-  /* Brand colours for the four usual answers. */
-  --answer-red: #d7263d;
-  --answer-blue: #1b998b;
-  --answer-yellow: #f4a259;
-  --answer-green: #2e294e;
   --podium-1: gold;
 }
 
@@ -169,9 +178,9 @@ The home page, the participant's phone, the projected screen and the host's cons
   font-size: 6em;
 }
 
-/* Right answers outlined in the brand colour once revealed. */
+/* Right answers outlined once revealed. */
 .qd-answer[data-correct='true'] {
-  outline: 0.2em solid var(--primary);
+  outline: 0.2em solid var(--success);
 }
 
 /* The last seconds in bold on the big screen. */

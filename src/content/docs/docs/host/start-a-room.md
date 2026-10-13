@@ -2,7 +2,7 @@
 title: Start a room and run the game
 description: Open a QuizDock room from a ready quiz, set the lobby options, start the quiz, drive it from the console, chain several quizzes and close the room.
 sidebar:
-  order: 8
+  order: 9
 ---
 
 A room is a live game: one PIN, one console for you, one big screen, and the players' phones. This page covers opening a room, the choices to make before starting, driving the game, and closing it.
@@ -17,7 +17,7 @@ A quiz must be **Ready** to be played. On a draft, the dashboard shows **Publish
    - **Open access**: the PIN and a nickname are enough, no account. No personal tracking.
 
    Tick **Remember my choice** to skip the question next time; change it later in **My account**, under **Participant access at launch**. The choice holds for as long as the room is open. Whether open access is allowed at all is an instance setting: ask whoever runs your instance (see [Settings](/docs/admin/settings/)).
-3. The console opens on the lobby, with the room's PIN and the invitation in its centre. [Invite the players](/docs/host/invite-players/) and open the **Projection window** on the big screen.
+3. The console opens on the lobby, with the room's PIN and the invitation in its centre. [Invite the players](/docs/host/invite-players/) and open the **Projection window** on the big screen, or [pair a screen on another computer](/docs/host/sound-and-projection/#project-from-another-computer).
 
 A quiz can be played in several rooms at the same time.
 
@@ -39,7 +39,7 @@ The lobby's **Before starting** section is fixed once the quiz starts:
 - **Personalised tracking**: on by default. On, results are recorded under each participant (archived leaderboard, history). Off, no individual result is kept, only the group's overall results. Unavailable in open access.
 - **Let participants pick their display name**: with accounts, off means the name shown comes from their account. Either way their results stay attached to the account: a chosen name is not anonymity.
 - **Who hears the sound in this quiz**: replaces the quiz's setting for this room. Questions with their own setting keep it.
-- **Language of the screens**: the language of the projection and the participants' screens, for the whole room. **Each quiz's language** (the default) follows the quiz being played; a language picked here holds for every quiz of the room, so a language class can play an English quiz with the interface in its own. Your console stays in your own [interface language](#interface-language).
+- **Language of the screens**: the language of the projection, and of every phone whose player has not picked their own, for the whole room. **Each quiz's language** (the default) follows the quiz being played; a language picked here holds for every quiz of the room, so a language class can play an English quiz with the interface in its own. Your console stays in your own [interface language](/docs/host/language-and-appearance/).
 
 Players see a notice on their phone that matches these choices, such as "Your individual results are not recorded — only the group’s overall results are."
 
@@ -99,10 +99,6 @@ Back in its lobby, the room shows its standings so far, and the console offers *
 The next quiz starts on its own: after 30 seconds ("Starts in 30 s", on the console and on the projection), or as soon as every connected participant is ready. **Stop the countdown** stops it; the quiz then waits for **Start the quiz**. Meanwhile the projection shows the invitation and, beside it, the room's standings. On the phones, the feedback card of the lobby is about the quiz just played: "Your feedback on the previous quiz".
 
 Each quiz scores from zero; **Room standings** and the **Room podium** add the quizzes up.
-
-## Interface language
-
-Your own screens (**My quizzes**, the editor, the console) are in your **Interface language**, chosen under **My account**, **Preferences**. **The instance's** language is the default. The projection and the participants' screens follow the room's **Language of the screens**, or else the quiz's language.
 
 ## Close the room
 

@@ -66,7 +66,7 @@ An operation that destroys something (deleting a quiz or a file, purging session
 - [Statistics](/docs/admin/statistics/): what is played right now, the instance at a glance, the last twelve months.
 - [Quizzes](/docs/admin/quizzes/): every quiz of the instance.
 - [Media](/docs/admin/media/): the instance's media.
-- [Accounts](/docs/admin/accounts-and-roles/), [Settings](/docs/admin/settings/), [Health](/docs/admin/health/), [Audit](/docs/admin/audit/): the instance.
+- [Accounts](/docs/admin/accounts-and-roles/), [Settings](/docs/admin/settings/), [Branding](/docs/admin/branding/#branding), [Interface](/docs/admin/branding/#interface), [Health](/docs/admin/health/), [Audit](/docs/admin/audit/): the instance.
 
 ## The update notice
 

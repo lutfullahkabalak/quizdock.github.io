@@ -27,6 +27,8 @@ The tabs of one browser share the session: a console, a projection or a preview 
 
 A client that is not a browser may send `Authorization: Bearer <access token>` instead of the cookie.
 
+The provider's sign-in page is the provider's own: QuizDock's [branding](/docs/admin/branding/) does not dress it. Give it your organisation's look in the provider; for Keycloak, with a theme of its own for the realm's login pages.
+
 ## Register the client
 
 On your provider, create a client for QuizDock:

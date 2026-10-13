@@ -2,7 +2,7 @@
 title: Invite players
 description: Bring players into a QuizDock room with the PIN, the QR code or a shared link, choose the invitation address, and what players do to join.
 sidebar:
-  order: 9
+  order: 10
 ---
 
 Players join a room with its 6-digit PIN. They need no app and, in local mode, no account: a browser, the PIN and a nickname. This page covers how you hand out the PIN and what players see.
