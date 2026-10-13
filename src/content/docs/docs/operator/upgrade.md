@@ -112,7 +112,7 @@ Since 0.13, the application logs every variable it cannot read (it uses the defa
 
 Migrations, applied on start, add the quiz themes and the instance's look (see [Quiz themes](/docs/host/quiz-themes/) and [Branding](/docs/admin/branding/#interface)). Every quiz takes the instance's default theme, Classic: QuizDock's usual colours, with animal icons on the answers. No setting, `.env` or Compose file changes.
 
-A `branding/override.css` that sets `--primary`, `--ring`, `--radius` or `--font-sans` in `:root`, or the answers' colours (`--answer-*`), no longer changes them: set the colours, the corners and the font in **Administration → Interface**, the answers' colours in a [quiz theme](/docs/host/quiz-themes/). The rest of the stylesheet and its `qd-*` hooks still apply.
+A `branding/override.css` keeps the last word over **Administration → Interface** (`--primary`, `--radius`, `--font-sans`…). On the live screens, the answers' colours (`--answer-*`) and `--primary` now come from the quiz's [theme](/docs/host/quiz-themes/): set them there.
 
 An instance installed before 0.13.2 can give QuizDock its own database role: see [above](#give-quizdock-its-own-database-role).
 

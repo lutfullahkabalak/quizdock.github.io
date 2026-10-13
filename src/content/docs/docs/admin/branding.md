@@ -120,18 +120,36 @@ The installed app takes `APP_NAME` as its name and `APP_LANG` as its language. A
 
 ## Your own stylesheet
 
-`override.css` is loaded after the app's stylesheet, for what **Interface** does not cover. A variable set in `:root` there wins over the app's defaults, except those the instance's look and the quiz themes set: the main colour (`--primary`, `--primary-foreground`, `--ring`), the corners (`--radius`) and the font (`--font-sans`) come from **Interface**, and on the live screens the answers' colours and `--primary` come from the quiz's theme. Change those there, not here.
+`override.css` is loaded after the app's stylesheet, for what **Interface** does not cover. A variable set in `:root` there wins over the app's defaults and over **Interface** too. On the live screens, the answers' colours and `--primary` come from the quiz's theme: change those in a [theme](/docs/host/quiz-themes/).
 
 | Token | What it colours |
 |---|---|
+| `--primary`, `--primary-foreground` | Buttons, the selected filters, the focus ring (Interface's main colour). |
+| `--link` | Links and the mark of the current page (Interface's accent). |
 | `--background`, `--foreground`, `--muted`, `--muted-foreground`, `--border` | The surfaces and their text. |
 | `--success`, `--destructive`, `--warning` | Right, wrong, and the second half of a question's time (red for its last fifth); the rating stars. |
 | `--warning-text` | Words in that amber on a light background (the double points badge). |
 | `--podium-1`, `--podium-2`, `--podium-3` | The podium's steps. |
+| `--font-sans` | The app's typeface (Interface's font). |
+| `--radius` | The roundness of cards, buttons and fields (Interface's corners). |
 
 QuizDock writes its colours in [oklch](https://oklch.com); any CSS colour works.
 
 A question's or a slide's background carries `data-scheme`: `dark` under light text, `light` under dark text. Inside it, QuizDock sets the neutral tokens (`--background`, `--foreground`, `--card`, `--muted`, `--muted-foreground`, `--border`, `--input`…) to that local palette.
+
+### Your own typeface
+
+**Interface** offers the shipped fonts and imports a woff2. A font kept in the branding folder works too. The instance's pages load fonts from the instance itself only: a font service on another address is blocked. Put the file in the branding folder and declare it in `override.css`:
+
+```css
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('/branding/atkinson-hyperlegible.woff2') format('woff2');
+}
+:root {
+  --font-sans: 'Atkinson Hyperlegible', system-ui, sans-serif;
+}
+```
 
 ## Hooks on the live screens
 
