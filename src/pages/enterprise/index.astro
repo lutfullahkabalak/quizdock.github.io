@@ -162,7 +162,7 @@ const faq = [
     <div class="prose">
       <h2>How is it operated?</h2>
       <ul>
-        <li><b>Backup and restore</b>: <code>./quizdock backup</code> dumps the database (and Keycloak's in the full setup) while the instance runs, and copies media, shared templates and <code>.env</code>. <code>./quizdock restore</code> puts a backup back. Scheduling is yours.</li>
+        <li><b>Backup and restore</b>: <code>./quizdock backup</code> dumps the database (and Keycloak's in the full setup) while the instance runs, and copies media, the templates folder and <code>.env</code>. <code>./quizdock restore</code> puts a backup back. Scheduling is yours.</li>
         <li><b>Upgrade</b>: <code>./quizdock upgrade X.Y.Z</code> backs up, pulls, migrates, waits for health and runs <code>doctor</code>. No rollback but the backup.</li>
         <li><b>Health</b>: a public <code>/health</code> endpoint (status, version, authentication mode) for your monitoring; the <b>Health</b> page and <code>./quizdock doctor</code> for the checks behind it.</li>
         <li><b>Logs</b>: plain text on the container's standard output, <code>./quizdock logs</code>.</li>

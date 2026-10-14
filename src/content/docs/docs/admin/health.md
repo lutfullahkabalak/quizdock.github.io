@@ -20,7 +20,7 @@ The checks are those of `qd doctor`, grouped by part.
 | **Environment** | The authentication mode, the name and the language. Every variable that cannot be read or falls outside what it accepts, and the settings that contradict each other. A problem on a level C1 variable fails the check; on the others, it is a warning. |
 | **Database** | PostgreSQL is reachable, and the migrations are applied. |
 | **Redis** | Redis is reachable. |
-| **Media** | The media folder and the shared templates folder are writable. |
+| **Media** | The media folder and the templates folder are writable. |
 | **Identity provider (OIDC)** | OIDC mode only. Whether participants need an account or may join in open access; the provider's discovery document and its signing keys, reached from the server. |
 
 What fails here is almost always fixed in `.env` or in the infrastructure, then the instance restarted: that is the operator's job. The same checks run from a shell, on the server, in the instance's folder:

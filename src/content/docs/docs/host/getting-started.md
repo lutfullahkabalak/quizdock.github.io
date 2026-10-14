@@ -38,7 +38,7 @@ The role comes from your identity provider, or an administrator of the instance 
 | Role | What it lets you do |
 |---|---|
 | **Participant** | Join rooms with a PIN. |
-| **Host** | Your own bank: create, edit and present quizzes, and share templates. |
+| **Host** | Your own bank: create, edit and present quizzes, and offer templates. |
 | **Manager** | Read the whole instance and administer it. |
 
 Managing is not hosting: a manager without the **Host** role cannot create, edit or present quizzes. A role cannot be changed from **My account**; see [Accounts and roles](/docs/admin/accounts-and-roles/) for how administrators grant them.

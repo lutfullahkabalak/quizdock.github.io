@@ -31,7 +31,7 @@ In Redis, for a short time:
 | A sign-in in progress | 10 minutes |
 | Wrong PINs from one address | 60 seconds |
 
-On disk: the media files hosts upload, and the shared templates.
+On disk: the media files hosts upload, and the templates folder.
 
 In the browser: in OIDC mode, two cookies for the session (`qd_session`, `qd_login`), unreadable by scripts. The browser's local storage keeps interface preferences, the participant's nickname and avatar, a device id, a reconnection token, and which quizzes were already rated. There are no tracking cookies.
 

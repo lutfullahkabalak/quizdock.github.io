@@ -5,7 +5,7 @@ sidebar:
   order: 10
 ---
 
-A QuizDock instance keeps its data in three places: the PostgreSQL database, the media folder and the shared templates folder. A backup takes all three at the same moment, with the configuration.
+A QuizDock instance keeps its data in three places: the PostgreSQL database, the media folder and the templates folder. A backup takes all three at the same moment, with the configuration.
 
 ## What to keep
 
@@ -14,7 +14,7 @@ A QuizDock instance keeps its data in three places: the PostgreSQL database, the
 | Accounts, quizzes, settings changed in the administration, archived results, audit | PostgreSQL | Yes, `database.sql` |
 | Keycloak accounts and configuration (full setup) | PostgreSQL, database `keycloak` | Yes, `keycloak.sql` |
 | Uploaded images, videos, sounds | `MEDIA_DIR` (`/data/media`) | Yes, `media/` |
-| Shared templates catalogue | `STORE_DIR` (`/data/store`) | Yes, `store/` |
+| Templates folder | `STORE_DIR` (`/data/store`) | Yes, `store/` |
 | Configuration | `.env` | Yes, `env` |
 | Your logo and stylesheet | The `branding/` folder you mount | **No**: keep a copy yourself |
 | The live state of games in progress | Redis | No: it lasts as long as a game |

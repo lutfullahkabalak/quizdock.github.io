@@ -145,7 +145,7 @@ Read by `docker-compose.prod.yml` and the `./quizdock` script, never by the appl
 | Database | volume `pgdata` | volume `quizdock`, at `/data/postgres` |
 | Live state (Redis) | volume `redisdata`, append-only file on | in memory only |
 | Media (`MEDIA_DIR`) | volume `mediadata`, at `/data/media` | volume `quizdock`, at `/data/media` |
-| Shared templates (`STORE_DIR`) | volume `storedata`, at `/data/store` | volume `quizdock`, at `/data/store` |
+| Templates folder (`STORE_DIR`) | volume `storedata`, at `/data/store` | volume `quizdock`, at `/data/store` |
 | Branding folder | `./branding` mounted at `/app/client/branding` (commented out in the Compose file) | `-v "$PWD/branding:/app/client/branding:ro"` |
 
 Compose prefixes its volume names with the project name: `quizdock_pgdata`, `quizdock_mediadata`, and so on.
