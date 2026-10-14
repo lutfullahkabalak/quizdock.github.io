@@ -1,5 +1,7 @@
 /** Addresses and navigation shared by every page. */
 export const DEMO_URL = 'https://quizdock-standalone.onrender.com';
+/** A second demo that never sleeps, while its hosting credit lasts. */
+export const ALT_DEMO_URL = 'https://quizdock-production-bd94.up.railway.app';
 export const DOCKER_HUB_URL = 'https://hub.docker.com/r/fchaussin/quizdock';
 export const SOURCE_URL = 'https://github.com/quizdock/quizdock';
 export const CHANGELOG_URL = 'https://github.com/quizdock/quizdock/blob/main/CHANGELOG.md';

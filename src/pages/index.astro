@@ -1,6 +1,6 @@
 ---
 import Page from '../layouts/Page.astro';
-import { DEMO_URL, DOCKER_HUB_URL, TRANSLATE_URL } from '../site';
+import { ALT_DEMO_URL, DEMO_URL, DOCKER_HUB_URL, TRANSLATE_URL } from '../site';
 ---
 
 <Page
@@ -97,7 +97,7 @@ import { DEMO_URL, DOCKER_HUB_URL, TRANSLATE_URL } from '../site';
     <div class="paths">
       <article class="card">
         <h3>Try</h3>
-        <p>The <a href={DEMO_URL} target="_blank" rel="noopener">public demo</a>: shared host account, wiped every hour, uploads off. It may take a minute to wake up.</p>
+        <p>The <a href={DEMO_URL} target="_blank" rel="noopener">public demo</a>: shared host account, wiped every hour, uploads off. It may take a minute to wake up; the <a href={ALT_DEMO_URL} target="_blank" rel="noopener">alternative demo ↗</a>, the same, never sleeps.</p>
         <a class="btn btn-primary" href={DEMO_URL} target="_blank" rel="noopener">Open the live demo ↗</a>
       </article>
       <article class="card">
