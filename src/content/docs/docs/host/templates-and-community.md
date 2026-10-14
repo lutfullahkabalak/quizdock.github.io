@@ -33,7 +33,7 @@ To keep the results, choose **Create a quiz from this** first, and present your 
 
 ## Take a template
 
-The **Templates** tab of **Quizzes** lists the quizzes the hosts of this instance have offered as templates, including the three sample quizzes QuizDock ships (**Discover France**, **Discover Taiwan**, **Discover Türkiye**).
+The **Templates** tab of **Quizzes** lists the quizzes the hosts of this instance have offered as templates, including the twelve sample quizzes QuizDock ships, one per country (**Discover France**, **Discover Japan**…).
 
 1. Search, filter by language or tags, and sort (**Recently offered**, **Title (A–Z)**, **Most questions**).
 2. Open a template to preview its questions and slides, its author and its licence.

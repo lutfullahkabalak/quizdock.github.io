@@ -47,7 +47,7 @@ The top bar shows **Quizzes** (with its tabs **My quizzes**, **Selections**, **T
 
 ## Start from a sample quiz
 
-QuizDock ships three sample quizzes in English: **Discover France**, **Discover Taiwan** and **Discover Türkiye**. Each one uses every question type, with pictures and slides, and every media is credited. They live in **Templates**.
+QuizDock ships twelve sample quizzes in English, one per country: **Discover China**, **Discover France**, **Discover Germany**, **Discover India**, **Discover Italy**, **Discover Japan**, **Discover Poland**, **Discover Russia**, **Discover Spain**, **Discover Taiwan**, **Discover Türkiye** and **Discover the United Kingdom**. Each one uses every question type, with pictures and slides, and every media is credited. They live in **Templates**.
 
 1. Open **Quizzes → Templates** (or, on an empty bank, **Browse the templates**).
 2. Open one of the samples and choose **Create a quiz from this**.
