@@ -43,7 +43,7 @@ For an account that left, or a colleague who takes over.
 
 The media only this quiz uses follow it. A media the previous owner also uses in another quiz stays with them. The quiz's archived sessions follow too, so the new owner can read their results.
 
-This is not how hosts share their work with each other: they share copies, through templates.
+This is not how hosts share their work with each other: they share a quiz with the other hosts, read-only, or offer a copy as a template. See [Templates and community](/docs/host/templates-and-community/).
 
 From the command line, on the server, in the instance's folder:
 

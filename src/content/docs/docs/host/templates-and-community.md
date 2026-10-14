@@ -5,15 +5,31 @@ sidebar:
   order: 8
 ---
 
-You do not have to start from a blank quiz. Your instance has a catalogue of templates offered by its hosts, and it can also offer community quizzes published by other authors. This page covers taking a quiz from either, and offering or sharing your own.
+You do not have to start from a blank quiz. Your instance has a catalogue of templates offered by its hosts, and it can also offer community quizzes published by other authors. This page covers taking a quiz from either, presenting a quiz another host shares, and offering or sharing your own.
 
 ## Three ways to share, three different things
 
 | | Who sees it | What they get |
 |---|---|---|
-| **Share with the instance’s other hosts** (quiz settings) | The other hosts of your instance, in their quiz list | Your quiz, read-only. **Create a quiz from this** gives them a copy. |
+| **Share with the instance’s other hosts** (quiz settings) | The other hosts of your instance, in their quiz list | Your quiz itself, read-only. They can present it without keeping results, or choose **Create a quiz from this** to get a copy. |
 | **Offer as a template** | Every host of your instance, in **Templates** | A copy in the catalogue, to take independent copies from. |
 | **Export for publication** | Anyone, once you publish the file in the community store | A file checked against what the community store accepts. |
+
+## Present a quiz another host shares
+
+A quiz another host shares shows in your quiz list, read-only, with its owner's name. You can present it as it is, without a copy of your own. It must be ready, with at least one question. Choose **Present without keeping results**:
+
+- on its card in the quiz list;
+- in its read-only view, where it is the main action, next to **Create a quiz from this**;
+- or pick it in a room's quiz picker (**Choose the quiz**, **Change quiz**), where it is marked "by {name}, nothing kept".
+
+Nothing of such a game is kept: no session in **History** or **Sessions**, no results, no answers. In the lobby, **Record all answers** and **Personalised tracking** are greyed: "Another host’s quiz, presented as it is: nothing of it is kept." No **Archive this quiz's results** is offered when it ends. The players' notice says "Nothing of this quiz is recorded: neither your taking part nor your answers." In a room, the quiz counts in the live room standings while the room is open.
+
+Ratings still reach the quiz: its owner reads them in **Reviews**, as **Anonymous**, with no nickname.
+
+The owner may edit, unshare or delete the quiz meanwhile: a game in progress plays to its end, as the quiz was when it started. Once the quiz is no longer shared or ready, it cannot be presented again.
+
+To keep the results, choose **Create a quiz from this** first, and present your copy.
 
 ## Take a template
 
@@ -70,7 +86,11 @@ No. A copy is independent from the moment it is taken. Offering it again updates
 
 ### Can other hosts change a quiz I share with them?
 
-No. A quiz shared with the instance's other hosts is read-only for them. They can only create their own copy.
+No. A quiz shared with the instance's other hosts is read-only for them. They can present it without keeping results, or create their own copy.
+
+### Do I see the results when another host presents my quiz?
+
+No. Nothing of their game is kept, for them or for you. Only the ratings reach you, in **Reviews**, without a nickname.
 
 ### Can I share a quiz that uses photos from the web?
 

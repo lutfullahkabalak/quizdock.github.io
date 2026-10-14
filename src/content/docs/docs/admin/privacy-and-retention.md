@@ -19,7 +19,7 @@ In the database:
 | **Archived sessions** | For each archived game: its host, PIN and room, the number of players, the success rate, and a copy of the quiz as it was played. |
 | **Results** | With personalised tracking on: each participant's nickname, score, rank, number of right answers, average time and streak, linked to their account when they have one. |
 | **Answers** | With full capture on only: every answer of every participant. |
-| **Feedback** | What participants leave on a quiz: their nickname, a rating from 1 to 5, an optional comment. |
+| **Feedback** | What participants leave on a quiz: their nickname, a rating from 1 to 5, an optional comment. A rating left during another host's game of a shared quiz (below) has no nickname. |
 | **Audit** | Every administrative action and refusal: the name and account of who did it, their IP address, the parameters (secrets masked). |
 
 In Redis, for a short time:
@@ -50,6 +50,10 @@ At the end, **Archive this quiz's results** is ticked by default: the leaderboar
 
 In OIDC mode with open access allowed, the host also chooses how participants join: with their account, or with a PIN and a nickname alone (no personal tracking). See [Accounts and roles](/docs/admin/accounts-and-roles/#open-access-oidc-mode).
 
+### Another host's shared quiz
+
+A host may present a quiz another host shares, without keeping results (see [Templates and community](/docs/host/templates-and-community/#present-a-quiz-another-host-shares)). Such a game archives nothing, however it ends: no session, no results, no answers. Full capture and personalised tracking are off for it. Only its ratings reach the quiz, without the nickname; the quiz's owner reads them as **Anonymous**.
+
 ### What participants are told
 
 The participant's page shows one notice matching these choices:
@@ -59,8 +63,9 @@ The participant's page shows one notice matching these choices:
 - "Your individual results are not recorded — only the group's overall results are."
 - "Your taking part and your score are recorded with each quiz's results, under your nickname."
 - "Your taking part and your score are recorded with each quiz's results, under your nickname — and every one of your answers is kept."
+- "Nothing of this quiz is recorded: neither your taking part nor your answers."
 
-The last two are for participants without an account. In OIDC mode, the host may let participants pick their display name; the app reminds that "a chosen name is not anonymity": results stay attached to the account.
+The fourth and fifth are for participants without an account; the last one, for another host's shared quiz presented without keeping results. In OIDC mode, the host may let participants pick their display name; the app reminds that "a chosen name is not anonymity": results stay attached to the account.
 
 ## How long data is kept
 
