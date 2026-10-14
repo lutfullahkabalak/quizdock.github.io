@@ -2,6 +2,7 @@
 import '../styles/site.css';
 import Faq from '../components/Faq.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import DemoChooser from '../components/DemoChooser.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 
 interface Props {
@@ -38,5 +39,6 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       {faq?.length ? <Faq items={faq} /> : null}
     </main>
     <SiteFooter />
+    <DemoChooser />
   </body>
 </html>

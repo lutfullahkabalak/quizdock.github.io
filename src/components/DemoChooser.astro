@@ -1,0 +1,113 @@
+---
+/*
+ * While there are two demos, every link to the demo opens a choice between them instead
+ * of going straight to it (a modifier-click still opens the live demo). The script, once
+ * per page however often the component is placed, builds the dialog; without an
+ * alternative demo it does nothing and the links go where they say.
+ */
+---
+
+<script>
+  import { ALT_DEMO_URL, DEMO_URL } from '../site';
+
+  if (ALT_DEMO_URL) {
+    const dialog = document.createElement('dialog');
+    dialog.id = 'demo-chooser';
+    dialog.setAttribute('aria-labelledby', 'demo-chooser-title');
+    dialog.innerHTML = `
+      <form method="dialog" class="dc-close-row"><button class="dc-close" aria-label="Close">×</button></form>
+      <h2 id="demo-chooser-title">Try the live demo</h2>
+      <p class="dc-lede">Two copies of the same public demo: a shared host account, wiped every hour, uploads off.</p>
+      <div class="dc-choices">
+        <a class="dc-choice" href="${DEMO_URL}" target="_blank" rel="noopener">
+          <b>Live demo ↗</b><span>May take a minute to wake up.</span></a>
+        <a class="dc-choice" href="${ALT_DEMO_URL}" target="_blank" rel="noopener">
+          <b>Alternative demo ↗</b><span>The same, never asleep, while it lasts.</span></a>
+      </div>`;
+    document.body.append(dialog);
+    const demo = DEMO_URL.replace(/\/$/, '');
+    document.addEventListener('click', (e) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const link = (e.target as Element | null)?.closest?.('a[href]') as HTMLAnchorElement | null;
+      if (!link || dialog.contains(link) || link.href.replace(/\/$/, '') !== demo) return;
+      e.preventDefault();
+      dialog.showModal();
+    });
+    // A choice made, or a click on the backdrop: the dialog goes.
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog || (e.target as Element).closest('.dc-choice')) dialog.close();
+    });
+  }
+</script>
+
+<style is:global>
+  /* The site's tokens on its pages, Starlight's on the documentation. */
+  #demo-chooser {
+    --dc-bg: var(--surface, var(--sl-color-bg, #fff));
+    --dc-fg: var(--fg, var(--sl-color-white, #111));
+    --dc-muted: var(--muted, var(--sl-color-gray-3, #666));
+    --dc-border: var(--border, var(--sl-color-gray-5, #ddd));
+    --dc-accent: var(--primary, var(--sl-color-accent, #4f46e5));
+    background: var(--dc-bg);
+    color: var(--dc-fg);
+    border: 1px solid var(--dc-border);
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem 1.5rem;
+    width: min(32rem, calc(100vw - 2rem));
+    /* Centred whatever the page's reset (Starlight zeroes a dialog's margin). */
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    height: fit-content;
+    box-shadow: 0 16px 48px rgb(0 0 0 / 0.2);
+  }
+  #demo-chooser::backdrop {
+    background: rgb(0 0 0 / 0.45);
+  }
+  #demo-chooser .dc-close-row {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+  }
+  #demo-chooser .dc-close {
+    background: none;
+    border: 0;
+    color: var(--dc-muted);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  #demo-chooser h2 {
+    margin: 0 0 0.4rem;
+    font-size: 1.35rem;
+  }
+  #demo-chooser .dc-lede {
+    margin: 0 0 1rem;
+    color: var(--dc-muted);
+  }
+  #demo-chooser .dc-choices {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+  #demo-chooser .dc-choice {
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--dc-border);
+    border-radius: 0.75rem;
+    color: inherit;
+    text-decoration: none;
+  }
+  #demo-chooser .dc-choice:hover,
+  #demo-chooser .dc-choice:focus-visible {
+    border-color: var(--dc-accent);
+  }
+  #demo-chooser .dc-choice b {
+    color: var(--dc-accent);
+  }
+  #demo-chooser .dc-choice span {
+    color: var(--dc-muted);
+    font-size: 0.9rem;
+  }
+</style>
