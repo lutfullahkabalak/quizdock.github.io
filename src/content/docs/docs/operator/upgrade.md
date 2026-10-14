@@ -27,7 +27,7 @@ GitHub sees the server's IP address; nothing else is sent. To turn it off, set `
 On the server, in the instance's folder:
 
 ```sh
-./quizdock upgrade 0.15.0
+./quizdock upgrade 0.16.0
 ```
 
 It:
@@ -43,7 +43,7 @@ It:
 
 Without a tag, `upgrade` pulls the tag already in `.env` again: with `latest`, that is the latest release.
 
-**Standalone:** the script pulls the standalone image of that release (`standalone-0.15.0`, or `standalone` when the tag is `latest`), then recreates the container; the data stays in the `quizdock` volume.
+**Standalone:** the script pulls the standalone image of that release (`standalone-0.16.0`, or `standalone` when the tag is `latest`), then recreates the container; the data stays in the `quizdock` volume.
 
 Check the result with `./quizdock status`, and the migrations with `./quizdock migrate:status`.
 
@@ -69,7 +69,7 @@ On the server, in the instance's folder:
 
 ```sh
 ./quizdock backup
-# set QUIZDOCK_TAG=0.15.0 in .env, then:
+# set QUIZDOCK_TAG=0.16.0 in .env, then:
 docker compose -f docker-compose.prod.yml pull
 docker compose -f docker-compose.prod.yml up -d
 docker compose -f docker-compose.prod.yml logs migrate
@@ -107,6 +107,10 @@ What changes for an operator, by release. Read every note between your version a
 ### From v1: a broken C1 variable refuses to start
 
 Since 0.13, the application logs every variable it cannot read (it uses the default instead) or that is out of range (it uses it as is), and `doctor` lists them. A critical one (level C1, for example `AUTH_MODE=OIDC` instead of `oidc`) is only a warning for now. **From v1, the instance will refuse to start** with it. Fix what the log names before then. See [Configuration](/docs/operator/configuration/#warnings-at-start).
+
+### 0.16: selections, and presenting a shared quiz
+
+Two migrations, applied on start: `quiz_feedback.nickname` may be empty, for the ratings of a shared quiz another host presents without keeping results; the `selection` and `selection_item` tables, and `game_session_log.selection_id`, hold the hosts' [selections](/docs/host/selections/). Nothing to do by hand. No setting, `.env` or Compose file changes.
 
 ### 0.15: quiz themes and the instance's look
 
