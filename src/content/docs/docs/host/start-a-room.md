@@ -33,13 +33,22 @@ Beside the current step, a column has two tabs: **Outline**, every step of the q
 
 ## Before starting
 
-The lobby's **Before starting** section is fixed once the quiz starts:
+The lobby's **Before starting** section is fixed once the quiz starts. It has two tabs.
+
+**Data**:
 
 - **Record all answers**: keeps each player's answer details, for individual tracking. Off by default. Players are told at the start. Turning it on keeps every answer with its nickname, which is personal data: tell the participants before you play.
 - **Personalised tracking**: on by default. On, results are recorded under each participant (archived leaderboard, history). Off, no individual result is kept, only the group's overall results. Unavailable in open access.
-- **Let participants pick their display name**: with accounts, off means the name shown comes from their account. Either way their results stay attached to the account: a chosen name is not anonymity.
+- **Let participants pick their display name**, in OIDC mode with accounts: off means the name shown comes from their account. Either way their results stay attached to the account: a chosen name is not anonymity.
+- In OIDC mode, a note recalls how participants join: **Accounts required** or **Open access**.
+
+For a quiz another host shares, **Record all answers** and **Personalised tracking** are greyed: "Another host’s quiz, presented as it is: nothing of it is kept." See [Templates and community](/docs/host/templates-and-community/#present-a-quiz-another-host-shares).
+
+**Screens and sound**:
+
 - **Who hears the sound in this quiz**: replaces the quiz's setting for this room. Questions with their own setting keep it.
-- **Language of the screens**: the language of the projection, and of every phone whose player has not picked their own, for the whole room. **Each quiz's language** (the default) follows the quiz being played; a language picked here holds for every quiz of the room, so a language class can play an English quiz with the interface in its own. Your console stays in your own [interface language](/docs/host/language-and-appearance/).
+- **Language of the screens**: the language of the projection, and of every phone whose player has not picked their own, for the whole room. **Each quiz's language** (the default) follows the quiz being played; a language picked here holds for every quiz of the room, so a language class can play an English quiz with the interface in its own. The console's **Projection** and **Participant** views show the screens in that language; the rest of your console stays in your own [interface language](/docs/host/language-and-appearance/).
+- A note on the media sent ahead: the participants' devices receive the next question's image, sound or video a few seconds before it appears, never its text nor its answers.
 
 Players see a notice on their phone that matches these choices, such as "Your individual results are not recorded — only the group’s overall results are."
 
@@ -94,7 +103,9 @@ A room can play several quizzes in a row. The participants stay in it, and nobod
 - During a quiz, **Stop the quiz…** stops it here and takes the room back to its lobby. **Keep what was played so far** is ticked by default: the quiz is archived as interrupted and counted in the room's standings.
 - In the lobby, before the quiz starts, **Change quiz** replaces the quiz picked.
 
-Back in its lobby, the room shows its standings so far, and the console offers **Choose the quiz**. The picker lists your ready quizzes; once the room has played one, **Played in this room** filters them (**All quizzes**, **Not played yet**, **Already played**). **Open this quiz** brings it into the room's lobby.
+For a quiz another host shares, neither box is offered: nothing of it is kept.
+
+Back in its lobby, the room shows its standings so far, and the console offers **Choose the quiz**. The picker lists your ready quizzes, and the quizzes other hosts share, marked "by {name}, nothing kept"; once the room has played one, **Played in this room** filters them (**All quizzes**, **Not played yet**, **Already played**). **Open this quiz** brings it into the room's lobby.
 
 The next quiz starts on its own: after 30 seconds ("Starts in 30 s", on the console and on the projection), or as soon as every connected participant is ready. **Stop the countdown** stops it; the quiz then waits for **Start the quiz**. Meanwhile the projection shows the invitation and, beside it, the room's standings. On the phones, the feedback card of the lobby is about the quiz just played: "Your feedback on the previous quiz".
 

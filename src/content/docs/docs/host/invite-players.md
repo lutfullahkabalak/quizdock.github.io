@@ -13,7 +13,7 @@ In the lobby, the invitation fills the centre of the console. Once the quiz has 
 
 - the **QR code to join**, which opens the room directly;
 - under **Invite players**, the address to type and the 6-digit PIN;
-- **Share**: sends the invitation (PIN and direct link) through the device's share sheet, or copies it to the clipboard ("Invitation copied (PIN + link) to the clipboard."). Over plain `http` on a local network, where the browser offers neither, it shows the address to copy: "Copy this address and send it: …";
+- **Share**: sends the direct link alone, its PIN in it, through the device's share sheet, or copies it to the clipboard ("Link copied to the clipboard."). Over plain `http` on a local network, where the browser offers neither, it shows the address to copy: "Copy this address and send it: …";
 - the **Invitation address** (below).
 
 **Projection window**, at the end of the console's second row, opens the big screen. In the lobby it shows the QR code, the PIN and "Join at" followed by the address to type.

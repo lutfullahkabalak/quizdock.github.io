@@ -20,7 +20,7 @@ In a game:
 
 | Screen | Speaks |
 |---|---|
-| The console, the editor, the lists | Your language. |
+| The console, the editor, the lists | Your language. The console's **Projection** and **Participant** views speak the room's, as the screens they show. |
 | The projection | The room's **Language of the screens**, by default the language of the quiz being played. See [Start a room](/docs/host/start-a-room/#before-starting). |
 | A player's phone | The language the player picked, else the room's. |
 
