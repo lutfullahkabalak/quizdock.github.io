@@ -21,7 +21,7 @@ Each selection shows its first quizzes, its number of quizzes ("3 quizzes · 2 p
 
 A selection holds at most 50 quizzes. Changes are saved as you make them.
 
-Under **Quizzes, in order**, each line shows the quiz's title, its number of questions, its owner when it is another host's, its pace and **Autostart**. Select a line to set:
+Under **Quizzes, in order**, each line shows the quiz's first step as a small picture, its title, its number of questions, its owner when it is another host's, its pace and **Autostart**. Select a line to set:
 
 | Setting | What it does |
 |---|---|
