@@ -9,7 +9,7 @@ A selection is a named list of quizzes, in order, to present into a room in one 
 
 ## The selections
 
-**Quizzes** has a **Selections** tab, next to **My quizzes**, **Templates** and **Themes**. It lists your selections and those other hosts share with you, as cards or a list. Search, **Owner** and **Sort by** narrow it.
+**Quizzes** has a **Selections** tab, next to **My quizzes**, **Templates** and **Themes**. It lists your selections and those other hosts share with you, as cards or a list. **Search the selections**, **Owner** (once another host shares one with you) and **Sort by** narrow and order it.
 
 Each selection shows its first quizzes, its number of quizzes ("3 quizzes · 2 playable" when some cannot be played), and its owner when it is another host's. A selection you share carries **Shared**. Its main action is **Present**. On yours, **⋮** holds **Delete**: its quizzes and the results of its launches stay. On another host's, **Create a selection from this** sits next to **Present**.
 
