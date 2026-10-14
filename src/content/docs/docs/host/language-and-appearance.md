@@ -2,7 +2,7 @@
 title: Language and appearance
 description: Pick the language of the QuizDock interface, with or without an account, which language the big screen and the phones speak, and light or dark mode.
 sidebar:
-  order: 16
+  order: 17
 ---
 
 Anyone may pick the language of their own interface, and whether it is light or dark. This page holds for hosts, administrators and players alike.

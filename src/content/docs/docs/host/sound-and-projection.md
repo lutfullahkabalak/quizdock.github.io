@@ -2,7 +2,7 @@
 title: Sound and projection
 description: Put the QuizDock projection on the big screen, from your computer or another one, turn its sound on, set the room's effects and music, and control media from the console.
 sidebar:
-  order: 12
+  order: 13
 ---
 
 In a room you work with two screens: the console, for you, and the projection, for the audience. The projection plays the sound; the console stays silent. This page covers setting both up, the room's sound, and controlling media during the game.

@@ -11,7 +11,7 @@ A room is a live game: one PIN, one console for you, one big screen, and the pla
 
 A quiz must be **Ready** to be played. On a draft, the dashboard shows **Publish to present** instead.
 
-1. Choose **Present**, on the quiz in **My quizzes** or in the editor.
+1. Choose **Present**, on the quiz in **My quizzes** or in the editor, or on a [selection](/docs/host/selections/).
 2. In OIDC mode, if the instance allows open access, a **Participant access** dialog asks how participants join:
    - **Accounts required**: each participant signs in. Personal tracking stays available.
    - **Open access**: the PIN and a nickname are enough, no account. No personal tracking.
@@ -88,7 +88,7 @@ To remove a player, choose **Ban {nickname}** on their row. The ban lasts from 1
 
 ## Several quizzes in one room
 
-A room can play several quizzes in a row. The participants stay in it, and nobody types the PIN again.
+A room can play several quizzes in a row. The participants stay in it, and nobody types the PIN again. To prepare the list beforehand, make a [selection](/docs/host/selections/): the lobby then picks each next quiz on its own.
 
 - At the podium, **Back to the lobby** takes the room back to its lobby. **Archive this quiz's results** is ticked by default.
 - During a quiz, **Stop the quiz…** stops it here and takes the room back to its lobby. **Keep what was played so far** is ticked by default: the quiz is archived as interrupted and counted in the room's standings.
