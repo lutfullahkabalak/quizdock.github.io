@@ -2,7 +2,7 @@
 title: Language and appearance
 description: Pick the language of the QuizDock interface, with or without an account, which language the big screen and the phones speak, and light or dark mode.
 sidebar:
-  order: 16
+  order: 17
 ---
 
 Anyone may pick the language of their own interface, and whether it is light or dark. This page holds for hosts, administrators and players alike.
@@ -20,7 +20,7 @@ In a game:
 
 | Screen | Speaks |
 |---|---|
-| The console, the editor, the lists | Your language. |
+| The console, the editor, the lists | Your language. The console's **Projection** and **Participant** views speak the room's, as the screens they show. |
 | The projection | The room's **Language of the screens**, by default the language of the quiz being played. See [Start a room](/docs/host/start-a-room/#before-starting). |
 | A player's phone | The language the player picked, else the room's. |
 

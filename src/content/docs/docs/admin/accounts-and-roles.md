@@ -14,7 +14,7 @@ An account holds a set of roles. An account with no role is a participant.
 | Role | In the app | What it allows |
 |---|---|---|
 | none | "Participant" | Join rooms with a PIN. |
-| `host` | "Host" | Its own bank: create, edit and present quizzes, share templates. |
+| `host` | "Host" | Its own bank: create, edit and present quizzes, offer templates. |
 | `admin` | "Administrator" ("Manager" under **My account**) | Read the whole instance and administer it. On its own, it creates, edits and presents nothing, and does not take the host seat. |
 
 The two roles add up: `host,admin` is the usual account of the person who runs a small instance, with the whole instance to administer and a bank of their own.

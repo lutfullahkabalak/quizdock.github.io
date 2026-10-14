@@ -2,7 +2,7 @@
 title: Sound and projection
 description: Put the QuizDock projection on the big screen, from your computer or another one, turn its sound on, set the room's effects and music, and control media from the console.
 sidebar:
-  order: 12
+  order: 13
 ---
 
 In a room you work with two screens: the console, for you, and the projection, for the audience. The projection plays the sound; the console stays silent. This page covers setting both up, the room's sound, and controlling media during the game.
@@ -27,7 +27,7 @@ The console never plays the quiz's sound, so you can keep it on a laptop facing 
 When the projector hangs on another computer than yours, make a screen on that computer the room's projection:
 
 1. In the console, choose **⋮** next to **Projection window**: **Project from another computer**.
-2. On the computer connected to the projector, open the address it shows, or scan its QR code.
+2. On the computer connected to the projector, open the address it shows, or scan its QR code. Its **Share** sends that address alone, through the share sheet or the clipboard.
 3. That screen shows a **Projection code** of 4 digits, in its bottom-left corner.
 4. Type it in **Code shown on that screen** and choose **Make it the projection**. The console says "That screen is now the room's projection."
 

@@ -19,7 +19,7 @@ The previews of the quiz (the preview page, the question and slide forms, the ca
 
 ## The themes
 
-**Quizzes** has three tabs: **My quizzes**, **Templates** and **Themes**. **Themes** lists the shipped themes first, then **Made by the hosts**, as cards or a list. **Search by name** and **Accessible only** narrow it.
+**Quizzes** has four tabs: **My quizzes**, **Selections**, **Templates** and **Themes**. **Themes** lists the shipped themes first, then **Made by the hosts**, as cards or a list. Its bar is the other tabs': **Search by name**, **Owner** (when the hosts' themes have more than one owner), **Sort by** (**Recently updated**, **Title (A–Z)**) and the display. **Accessible only**, under the search, keeps the accessible themes.
 
 | Shipped theme | What it is |
 |---|---|

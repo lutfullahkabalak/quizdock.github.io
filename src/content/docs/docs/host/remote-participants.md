@@ -2,7 +2,7 @@
 title: Remote participants
 description: Let QuizDock players follow from home or another room, with the whole question, its video and its sound on their own device.
 sidebar:
-  order: 11
+  order: 12
 ---
 
 Players who cannot see the big screen can still play. A remote participant gets the whole question on their own device: its text, its answers, its picture, and its video and sound. This page covers how players choose, who hears what, and the limits.

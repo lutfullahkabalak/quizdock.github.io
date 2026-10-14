@@ -25,7 +25,7 @@ const faq = [
   },
   {
     q: 'How do I back up an instance?',
-    a: `<p>On the server, in the instance's folder: <code>./quizdock backup</code>. It dumps the database while the instance runs and copies the media, the shared templates and <code>.env</code> into <code>./backups/</code>. Schedule it yourself; <code>./quizdock restore</code> puts a backup back.</p>`,
+    a: `<p>On the server, in the instance's folder: <code>./quizdock backup</code>. It dumps the database while the instance runs and copies the media, the templates folder and <code>.env</code> into <code>./backups/</code>. Schedule it yourself; <code>./quizdock restore</code> puts a backup back.</p>`,
   },
 ];
 ---
@@ -117,7 +117,7 @@ chmod +x quizdock
     </div>
     <div class="prose">
       <p>
-        Media and shared templates are not in the database: back them up together, at the same moment. That is what
+        Media and the templates folder are not in the database: back them up together, at the same moment. That is what
         <code>./quizdock backup</code> does. An optional <code>branding/</code> folder, mounted for a logo and styles, is not
         part of the backup.
       </p>

@@ -21,7 +21,7 @@ In **Quizzes → My quizzes**, **New quiz** offers:
 
 A blank draft is not a blank page: it opens with an intro slide that shows `{title}` and `{description}` on a random gradient, followed by a first multiple-choice question. The intro follows the quiz as you rename it.
 
-The editor header holds the title (edit it in place), the status, **Preview** and **More**. **More** opens **History**, **Export**, **Export for publication**, **Share as a template** (once the quiz is ready), **Archive** and **Delete quiz**.
+The editor header holds the title (edit it in place), the status, **Preview** and **More**. **More** opens **History**, **Export**, **Export for publication**, **Offer as a template** (once the quiz is ready), **Archive** and **Delete quiz**.
 
 ## Settings
 
@@ -32,9 +32,9 @@ The editor header holds the title (edit it in place), the status, **Preview** an
   - **Who hears the sound**: **Projection only**, **Projection and remote participants** (the default) or **Every device**. See [Sound and projection](/docs/host/sound-and-projection/).
 - **Language & sharing**:
   - **Language**: the language the quiz is written in. The participants' screens follow it, unless the room picks another; a new true or false question starts with **True** and **False** in it.
-  - **Licence**: **CC0 — no conditions**, **CC BY 4.0 — credit the author** or **CC BY-SA 4.0 — credit, share alike**. Required to share the quiz as a template.
+  - **Licence**: **CC0 — no conditions**, **CC BY 4.0 — credit the author** or **CC BY-SA 4.0 — credit, share alike**. Required to offer the quiz as a template.
   - **Tags**: up to 5 keywords. Press Enter to add one.
-  - **Share with the instance’s other hosts**: they see the quiz in their list, read-only, and can **Create a quiz from this** to get their own copy.
+  - **Share with the instance’s other hosts**: they see the quiz in their list, read-only. They can present it without keeping results, or **Create a quiz from this** to get their own copy. Unchecked, it stays yours alone. See [Templates and community](/docs/host/templates-and-community/#present-a-quiz-another-host-shares).
 - **Theme**: the quiz's look on the big screen and the phones. See [Quiz themes](/docs/host/quiz-themes/).
 - **Allow player feedback**: a rating panel (1 to 5 stars and an optional comment) is offered at the end of the quiz, every time it is played. It is on for a new quiz. Once reviews come in, **See all {n} reviews** opens them.
 

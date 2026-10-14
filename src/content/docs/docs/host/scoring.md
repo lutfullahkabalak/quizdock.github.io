@@ -2,7 +2,7 @@
 title: Scoring
 description: How QuizDock scores an answer, with examples, the speed bonus, the streak bonus, partial credit, typo tolerance and closest-answer questions.
 sidebar:
-  order: 13
+  order: 14
 ---
 
 QuizDock scores every answer on the server, with the same rules for everyone. This page explains them with examples, so you can choose a question's **Points** and **Scoring** knowing what players will get. Players see a one-line rule under each question, such as "Several correct answers — each right tick counts, each wrong one cancels one."

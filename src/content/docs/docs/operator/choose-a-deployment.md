@@ -28,7 +28,7 @@ The first two run in **local mode** (`AUTH_MODE=none`), the last two in **OIDC m
 ## What every setup shares
 
 - **The image.** `fchaussin/quizdock` on [Docker Hub](https://hub.docker.com/r/fchaussin/quizdock), for `amd64` and `arm64`. One process serves the pages, the API and the game socket on port 3000: there is no separate web server to run.
-- **The data.** PostgreSQL holds accounts, quizzes, settings changed in the administration and archived results. Redis holds the live state of games. Uploaded media and shared templates are files on volumes. See [Back up an instance](/docs/operator/backup/).
+- **The data.** PostgreSQL holds accounts, quizzes, settings changed in the administration and archived results. Redis holds the live state of games. Uploaded media and the templates folder are files on volumes. See [Back up an instance](/docs/operator/backup/).
 - **The administration.** The same web administration in every setup. See the [administration overview](/docs/admin/overview/).
 - **The tools.** The `./quizdock` script on the server, and the `qd` command inside the container. See [Command line](/docs/operator/cli/).
 

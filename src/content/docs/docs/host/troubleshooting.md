@@ -2,7 +2,7 @@
 title: Troubleshooting for hosts
 description: Fix the problems QuizDock hosts and players meet most often, from a PIN that does not work to a silent projector or a refused video.
 sidebar:
-  order: 17
+  order: 18
 ---
 
 Most problems in a room come from the network address, the browser's sound policy or a choice made in the lobby. Find the message or the symptom below; the sections after the tables cover the longer cases. When the cause is an instance setting, ask whoever runs your instance.
